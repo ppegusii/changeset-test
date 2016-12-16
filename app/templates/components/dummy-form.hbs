@@ -1,7 +1,9 @@
 <form>
   {{input value=changeset.firstName}}
   {{input value=changeset.lastName}}
-  {{input value=changeset.contact.phone}}
+  {{input value=changeset.contact.phones.home}}
+  {{model.contact.phones.home}}
+  {{input value=changeset.contact.phones.work}}
   {{input value=changeset.contact.email}}
   {{#each changeset.aliases as |alias|}}
     {{input value=alias.name}}

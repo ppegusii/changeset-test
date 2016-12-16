@@ -1,12 +1,17 @@
 import Ember from 'ember';
 
+const Phones = Ember.Object.extend();
+
 export default Ember.Route.extend({
   model(){
     return {
       firstName: 'Patrick',
       lastName: 'Pegus',
       contact: {
-        phone: '4133421180',
+        phones: Phones.create({
+          home: '4133421180',
+          work: '4134396354'
+        }),
         email: 'ppegusii@gmail.com'
       },
       aliases: [
